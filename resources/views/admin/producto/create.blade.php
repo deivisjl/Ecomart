@@ -1,0 +1,71 @@
+@extends('layouts.admin')
+
+@section('content')
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-6 offset-md-3">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row text-center">
+                        <div class="col-12">
+                            <h4>Nuevo producto</h4>
+                        </div>
+                    </div>
+                    <form action="{{ route('productos.store') }}" method="POST" enctype="multipart/form-data">
+                    {{ csrf_field() }}
+                    <div class="form-group">
+                        <label>Nombre</label>
+                        <input type="text" name="nombre" class="form-control {{ $errors->has('nombre') ? ' is-invalid' : '' }}" value="{{ old('nombre') }}">
+                        @if ($errors->has('nombre'))
+                            <div class="invalid-feedback">{{ $errors->first('nombre') }}</div>
+                        @endif
+                    </div>
+                    <div class="form-group">
+                        <label>Precio</label>
+                        <input type="text" name="precio" class="form-control {{ $errors->has('precio') ? ' is-invalid' : '' }}" value="{{ old('precio') }}">
+                        @if ($errors->has('precio'))
+                            <div class="invalid-feedback">{{ $errors->first('precio') }}</div>
+                        @endif
+                    </div>
+                    <div class="form-group">
+                        <label>Categoría</label>
+                        <select name="categoria" class="form-control {{ $errors->has('categoria') ? ' is-invalid' : '' }}">
+                             <option value="0">-- Seleccione una opción --</option>
+                             @foreach($categorias as $item)
+                             <option value="{{ $item->id }}">{{ $item->nombre }}</option>
+                             @endforeach
+                        </select>
+                        @if ($errors->has('categoria'))
+                            <div class="invalid-feedback">{{ $errors->first('categoria') }}</div>
+                        @endif
+                    </div>
+                    <div class="form-group">
+                        <label>Descripción</label>
+                        <textarea name="descripcion" class="form-control {{ $errors->has('nombre') ? ' is-invalid' : '' }}">{{ old('descripcion') }}</textarea>
+                        @if ($errors->has('descripcion'))
+                            <div class="invalid-feedback">{{ $errors->first('descripcion') }}</div>
+                        @endif
+                    </div>
+                    <div class="form-group {{ $errors->has('imagen') ? ' is-invalid' : '' }}">
+                        <label class="control-label">Imagen</label>
+                        <input type="file" name="imagen" class="form-control" required="true">
+                        @if ($errors->has('imagen'))
+                            <div class="invalid-feedback">{{ $errors->first('imagen') }}</div>
+                        @endif
+                    </div>
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@endsection
+@section('js')
+<script>
+	  $(function () {
+	    CKEDITOR.replace('descripcion')
+	    $('.textarea').wysihtml5()
+	  })	  
+</script>
+@endsection

@@ -1,0 +1,67 @@
+body{
+    background-color: rgba(0,0,0,.03)!important;
+}
+.bd-navbar {
+    min-height: 4rem;
+    background-color: #e75549;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.05),inset 0 -1px 0 rgba(0,0,0,.1);
+}
+.bd-navbar {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1071;
+}
+
+.bg-custom{
+    background-color: #1e73be;
+}
+
+.container-fluid2 {
+    height: 60px;
+    background-color: #e75549;
+
+}
+
+.sticky-top{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+}
+.divider-separator{
+    margin-bottom: 10px!important;
+}
+
+.divider-separator-admin{
+    margin-bottom: 65px !important;
+}
+
+.login-page, .register-page {
+    background: #e9ecef;
+}
+
+.login-box, .register-box {
+    width: 360px;
+    margin: 7% auto;
+}
+
+.login-logo, .register-logo {
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 300;
+}
+
+.card-title-custom{
+    min-height: 63px!important;
+}
+
+.card-text-custom{
+    color: #FFA600!important;
+    font-size: 2rem;
+}
+
+.table td, .table th {
+    padding: .5rem!important;
+}
