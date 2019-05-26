@@ -23,7 +23,7 @@ class CreateUsuarioTable extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->string('token')->nullable();
-            $table->integer('active')->default(1);
+            $table->integer('active')->default(0);
             $table->integer('rol_id')->unsigned();
             $table->foreign('rol_id')->references('id')->on('rol');
             $table->rememberToken();
