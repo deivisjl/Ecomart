@@ -12,6 +12,7 @@
 */
 
 Route::get('/', 'Inicio\InicioController@index');
+Route::get('/acerca-de', 'Inicio\InicioController@acerca_de');
 Route::get('/categoria/{slug}', 'Inicio\InicioController@categoria');
 Route::get('/detalle-producto/{id}', 'Inicio\InicioController@detalle');
 
@@ -55,5 +56,14 @@ Route::group(['middleware' => ['auth','confirmado','admin']], function() {
     Route::get('/pedido-detalle/{pedido}', 'Admin\Pedido\PedidoController@detalle');
     Route::get('/pedido-obtener/{pedido}', 'Admin\Pedido\PedidoController@obtener');
     Route::get('/pedido-descargar', 'Admin\Pedido\PedidoController@descargar');
+
+    //About Me
+    Route::get('/mi-empresa', 'Inicio\InicioController@mi_empresa');
+    Route::get('/mi-empresa-nuevo', 'Inicio\InicioController@mi_empresa_nuevo');
+    Route::get('/mi-empresa/{request}', 'Inicio\InicioController@empresa_obtener');
+    Route::post('/mi-empresa-guardar', 'Inicio\InicioController@mi_empresa_guardar');
+    Route::get('/mi-empresa/{request}/edit', 'Inicio\InicioController@mi_empresa_editar');
+    Route::put('/mi-empresa/{request}', 'Inicio\InicioController@mi_empresa_actualizar');
+    Route::get('/mi-empresa-activar/{request}', 'Inicio\InicioController@mi_empresa_activar');
 
 });

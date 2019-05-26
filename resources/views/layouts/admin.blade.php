@@ -58,9 +58,9 @@
         </li> -->
         </ul>
         <ul class="navbar-nav ml-auto">
-            <!-- <li class="nav-item active">
-                <a class="nav-link" href="#"><i class="fa fa-address-card"></i> Acerca de <span class="sr-only">(current)</span></a>
-            </li> -->
+            <li class="nav-item active">
+                <a class="nav-link" href="/mi-empresa"><i class="fa fa-address-card"></i> Mi empresa <span class="sr-only">(current)</span></a>
+            </li>
             <li class="nav-item dropdown active ">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <i class="fa fa-user"></i> 
