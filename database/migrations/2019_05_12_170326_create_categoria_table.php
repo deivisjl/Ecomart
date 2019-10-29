@@ -17,7 +17,7 @@ class CreateCategoriaTable extends Migration
             $table->increments('id');
             $table->string('nombre');
             $table->string('slug');
-            $table->string('descripcion')->nullable();
+            $table->text('descripcion')->nullable();
             $table->timestamps();
             $table->engine = 'InnoDB';
         });

@@ -15,7 +15,7 @@ class Producto extends Model
 
 
     protected $fillable = [
-        'id','nombre','precio','slug','cantidad','img_url','descripcion','oferta','precio_oferta','categoria_id','categoria_id'
+        'id','nombre','precio','slug','cantidad','img_url','descripcion','oferta','precio_oferta','categoria_id'
     ];
 
     public function sluggable(){
