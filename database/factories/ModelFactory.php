@@ -43,7 +43,7 @@ $factory->define(App\Producto::class, function (Faker\Generator $faker) {
         'descripcion' => $faker->paragraph(1),
 		'precio' =>  $faker->numberBetween(10,50),
 		'cantidad' => $faker->numberBetween(1,10),
-		'img_url' => '/productos/92e612153eb71ffb08c0e71db217f8f82492483a.png',
+		'img_url' => '/img/productos/92e612153eb71ffb08c0e71db217f8f82492483a.png',
 		'descripcion' => $faker->paragraph(1),
 		'categoria_id' => $categoria->id,
     ];
